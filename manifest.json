@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Task",
+  "description": "Reminder of things to do",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "js": ["content.js", "makePDF/pdfMake.min.js", "makePDF/vfs_fonts.js"],
+      "css": ["content.css"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "icons": {
+    "16": "01@1x.png",
+    "32": "01@1x.png",
+    "48": "01@1x.png",
+    "128": "01@1x.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "makePDF/pdfMake.min.js",
+        "makePDF/vfs_fonts.js",
+        "mic.png"
+      ],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
